@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #005fa3, #0074c1);
+      background-color: #005fa3; /* fundo azul */
       color: #ffffff;
     }
 
@@ -35,8 +35,15 @@
     h1 {
       text-align: center;
       margin-top: 40px;
-      font-size: 2.2em;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      font-size: 2em;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    p {
+      text-align: center;
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 1.1em;
     }
 
     .categorias {
@@ -46,8 +53,7 @@
       justify-content: center;
       margin-top: 30px;
       padding: 40px 20px;
-      background: linear-gradient(135deg, #005fa3, #0074c1);
-      border-top: 5px solid #003f70;
+      background-color: #005fa3;
     }
 
     .categoria {
@@ -109,6 +115,7 @@
   </nav>
 
   <h1>Bem-vindo ao meu espaço de ideias</h1>
+  <p>Este é um blog pessoal onde compartilho reflexões, estudos e pensamentos sobre temas que me inspiram.</p>
 
   <div class="categorias">
     <div class="categoria">
