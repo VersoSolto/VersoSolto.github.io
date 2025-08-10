@@ -9,7 +9,7 @@ body {
 header, footer {
   text-align: center;
   padding: 1em;
-  background-color: #333;
+  background-color: #0077cc; /* azul petróleo */
   color: white;
 }
 
@@ -26,3 +26,47 @@ article {
   border-radius: 8px;
 }
 
+/* Links visíveis e modernos */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #005fa3;
+}
+
+/* Blocos de categorias na página inicial */
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.categoria {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.categoria:hover {
+  transform: scale(1.05);
+}
+
+.categoria h3 {
+  margin-bottom: 10px;
+}
+
+.categoria a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0077cc;
+  font-weight: bold;
+}
