@@ -1,3 +1,11 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #1a237e; /* Azul escuro */
+    color: #fff; /* Texto branco padrão */
+}
+
 header {
     background-color: #1a237e; /* Azul escuro */
     color: #fff;
@@ -90,6 +98,7 @@ footer {
     width: 100%;
 }
 
-/* Pode ser necessário ajustar essa parte para o rodapé não cobrir o conteúdo */
+/* Adiciona um espaço abaixo do conteúdo para o rodapé fixo */
 body {
-    padding-bottom: 50px; /* Adiciona um espaço abaixo do conteúdo para o rodapé */
+    padding-bottom: 50px; 
+}
