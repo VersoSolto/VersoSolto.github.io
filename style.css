@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 2em;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+article {
+  background-color: white;
+  padding: 2em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
