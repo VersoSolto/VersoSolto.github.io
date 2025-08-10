@@ -1,63 +1,95 @@
-/* Estilo geral do corpo da página */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Estilo do cabeçalho e rodapé */
-header, footer {
+header {
+    background-color: #1a237e; /* Azul escuro */
+    color: #fff;
+    padding: 1em 0;
     text-align: center;
-    padding: 1em;
-    background-color: #2c3e50;
-    color: white;
 }
 
-/* Estilo do menu de navegação */
+.titulo-pagina {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    color: #ddd;
+    font-size: 0.9em;
+}
+
+nav {
+    background-color: #283593; /* Azul um pouco mais claro */
+    padding: 0.5em 0;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaço entre os itens do menu */
+    display: inline-block; /* Para centralizar os itens */
+}
+
+nav li {
+    display: inline;
+    margin: 0 1em;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    padding: 0.5em 1em;
-    display: block;
 }
 
-nav a:hover {
-    background-color: #34495e;
-    border-radius: 5px;
-}
-
-/* Estilo do conteúdo principal */
 main {
-    max-width: 900px;
-    margin: 2em auto;
-    padding: 1em;
+    padding: 2em;
+    max-width: 960px;
+    margin: 20px auto;
 }
 
-/* Estilo das categorias e posts */
 .categorias {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .categoria {
-    background-color: white;
-    padding: 2em;
+    background-color: #fff;
+    color: #333;
+    padding: 1.5em;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex: 1 1 300px; /* Ajuda a organizar os blocos em telas diferentes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.categoria h3 {
+    color: #1976d2; /* Azul mais claro para os títulos dos artigos */
+    margin-top: 0;
+}
+
+.categoria small {
+    color: #777;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.categoria p {
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.categoria a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1a237e; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Pode ser necessário ajustar essa parte para o rodapé não cobrir o conteúdo */
+body {
+    padding-bottom: 50px; /* Adiciona um espaço abaixo do conteúdo para o rodapé */
