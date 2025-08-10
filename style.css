@@ -1,36 +1,40 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
 /* Estilos globais e de corpo */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte mais moderna */
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #1a237e; /* Azul escuro */
-    color: #fff; /* Texto branco padrão */
+    background-color: #f4f4f4; /* Fundo mais claro */
+    color: #333;
     padding-bottom: 50px;
 }
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #1a237e;
+    background-color: #283593;
     color: #fff;
-    padding: 2em 0; /* Aumentado o padding para mais espaço */
+    padding: 3em 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .titulo-pagina {
-    font-size: 2.5em; /* Título maior */
+    font-size: 2.8em;
     margin-bottom: 0.2em;
-    font-weight: 300; /* Fonte mais leve */
+    font-weight: 700;
 }
 
 header p {
-    color: #bbb;
-    font-size: 1em;
+    color: #e8eaf6;
+    font-size: 1.1em;
 }
 
 /* Estilos de navegação */
 nav {
-    background-color: #283593; /* Azul um pouco mais claro */
-    padding: 1em 0; /* Aumentado o padding */
+    background-color: #3f51b5;
+    padding: 0.8em 0;
     text-align: center;
 }
 
@@ -38,54 +42,81 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: inline-block;
 }
 
 nav li {
     display: inline;
-    margin: 0 1.5em; /* Aumentado o espaçamento entre os links */
+    margin: 0 1.5em;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase; /* Links em maiúsculas */
-    letter-spacing: 1px; /* Espaçamento entre letras */
-    transition: color 0.3s ease; /* Transição suave na cor */
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #c5cae9; /* Cor mais clara ao passar o mouse */
+    color: #e8eaf6;
 }
 
-/* Estilos do conteúdo principal */
+/* Container principal e barra lateral */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 2em;
+    padding: 0 1em;
+}
+
 main {
-    padding: 2em 1em;
-    max-width: 960px;
-    margin: 20px auto; /* Centraliza o conteúdo */
+    flex: 3; /* O conteúdo principal ocupa 3 partes */
 }
 
-h2 {
-    color: #fff;
-    border-bottom: 2px solid #3f51b5; /* Linha de destaque para o título */
-    padding-bottom: 0.5em;
-    margin-top: 2em;
+.sidebar {
+    flex: 1; /* A barra lateral ocupa 1 parte */
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    align-self: flex-start; /* Fixa a barra lateral no topo */
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #283593;
+    font-weight: 700;
+}
+
+.perfil-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1em;
 }
 
 /* Estilos dos artigos */
+h2 {
+    color: #283593;
+    border-bottom: 2px solid #c5cae9;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+}
+
 .categoria {
     background-color: #fff;
     color: #333;
-    padding: 2em; /* Aumentado o padding interno */
+    padding: 2em;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 1.5em;
     transition: transform 0.3s ease;
 }
 
 .categoria:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 .categoria h3 {
@@ -101,8 +132,16 @@ h2 {
 
 /* Estilos do rodapé */
 footer {
-    background-color: #1a237e;
+    background-color: #283593;
     color: #fff;
     text-align: center;
-    padding: 1em 0;
+    padding: 1.5em 0;
+    margin-top: 2em;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Em telas pequenas, os elementos se empilham */
+    }
 }
