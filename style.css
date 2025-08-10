@@ -1,38 +1,63 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Educação Física | Verso Solto</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-  <nav>
-    <a href="index.html">Início</a> |
-    <a href="sobre.html">Sobre Mim</a> |
-    <a href="educacao-fisica.html">Educação Física</a> |
-    <a href="ciencias-sociais.html">Ciências Sociais</a> |
-    <a href="psicologia.html">Psicologia</a>
-  </nav>
+/* Estilo do cabeçalho e rodapé */
+header, footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #2c3e50;
+    color: white;
+}
 
-  <h1>🏃 Educação Física</h1>
-  <p>Textos, reflexões e estudos sobre corpo, movimento e saúde.</p>
+/* Estilo do menu de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os itens do menu */
+}
 
-  <div class="categorias">
-    <div class="categoria">
-      <h3>A importância do aquecimento antes do treino</h3>
-      <a href="#">Ler artigo</a>
-    </div>
-    <div class="categoria">
-      <h3>Corpo e consciência: o papel da Educação Física na formação integral</h3>
-      <a href="#">Ler artigo</a>
-    </div>
-  </div>
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    display: block;
+}
 
-  <footer>
-    © 2025 Verso Solto. Todos os direitos reservados.
-  </footer>
+nav a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
 
-</body>
-</html>
+/* Estilo do conteúdo principal */
+main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+/* Estilo das categorias e posts */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.categoria {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 300px; /* Ajuda a organizar os blocos em telas diferentes */
+}
