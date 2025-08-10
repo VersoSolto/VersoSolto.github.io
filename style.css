@@ -1,59 +1,21 @@
-body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  margin: 2em;
-  background-color: #ffffff; /* fundo branco */
-  color: #222222; /* texto escuro */
-}
-
-header, footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #005fa3; /* azul mais escuro */
-  color: #ffffff; /* texto branco */
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1em;
-}
-
-article {
-  background-color: #f9f9f9; /* fundo suave para blocos */
-  padding: 2em;
-  margin-bottom: 1em;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-/* Links visíveis */
-a {
-  color: #005fa3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #003f70;
-}
-
-/* Blocos de categorias */
 .categorias {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   margin-top: 30px;
+  padding: 20px;
+  background-color: #005fa3; /* fundo azul atrás das categorias */
 }
 
 .categoria {
-  background-color: #ffffff;
+  background-color: #ffffff; /* fundo branco forte */
+  color: #222222; /* texto escuro para contraste */
   padding: 20px;
   border-radius: 10px;
   width: 250px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
 }
 
@@ -63,6 +25,7 @@ a:hover {
 
 .categoria h3 {
   margin-bottom: 10px;
+  font-size: 1.2em;
 }
 
 .categoria a {
@@ -70,4 +33,10 @@ a:hover {
   margin-top: 10px;
   color: #005fa3;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.categoria a:hover {
+  text-decoration: underline;
+  color: #003f70;
 }
