@@ -2,15 +2,15 @@ body {
   font-family: sans-serif;
   line-height: 1.6;
   margin: 2em;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #ffffff; /* fundo branco */
+  color: #222222; /* texto escuro */
 }
 
 header, footer {
   text-align: center;
   padding: 1em;
-  background-color: #0077cc; /* azul petróleo */
-  color: white;
+  background-color: #005fa3; /* azul mais escuro */
+  color: #ffffff; /* texto branco */
 }
 
 main {
@@ -20,24 +20,25 @@ main {
 }
 
 article {
-  background-color: white;
+  background-color: #f9f9f9; /* fundo suave para blocos */
   padding: 2em;
   margin-bottom: 1em;
   border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Links visíveis e modernos */
+/* Links visíveis */
 a {
-  color: #0077cc;
+  color: #005fa3;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #005fa3;
+  color: #003f70;
 }
 
-/* Blocos de categorias na página inicial */
+/* Blocos de categorias */
 .categorias {
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +48,7 @@ a:hover {
 }
 
 .categoria {
-  background-color: white;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   width: 250px;
@@ -67,6 +68,6 @@ a:hover {
 .categoria a {
   display: inline-block;
   margin-top: 10px;
-  color: #0077cc;
+  color: #005fa3;
   font-weight: bold;
 }
