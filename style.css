@@ -1,31 +1,36 @@
+/* Estilos globais e de corpo */
 body {
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte mais moderna */
     line-height: 1.6;
     margin: 0;
     background-color: #1a237e; /* Azul escuro */
     color: #fff; /* Texto branco padrão */
+    padding-bottom: 50px;
 }
 
+/* Estilos do cabeçalho */
 header {
-    background-color: #1a237e; /* Azul escuro */
+    background-color: #1a237e;
     color: #fff;
-    padding: 1em 0;
+    padding: 2em 0; /* Aumentado o padding para mais espaço */
     text-align: center;
 }
 
 .titulo-pagina {
-    font-size: 2em;
-    margin-bottom: 0.5em;
+    font-size: 2.5em; /* Título maior */
+    margin-bottom: 0.2em;
+    font-weight: 300; /* Fonte mais leve */
 }
 
 header p {
-    color: #ddd;
-    font-size: 0.9em;
+    color: #bbb;
+    font-size: 1em;
 }
 
+/* Estilos de navegação */
 nav {
     background-color: #283593; /* Azul um pouco mais claro */
-    padding: 0.5em 0;
+    padding: 1em 0; /* Aumentado o padding */
     text-align: center;
 }
 
@@ -38,43 +43,54 @@ nav ul {
 
 nav li {
     display: inline;
-    margin: 0 1em;
+    margin: 0 1.5em; /* Aumentado o espaçamento entre os links */
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase; /* Links em maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    transition: color 0.3s ease; /* Transição suave na cor */
 }
 
+nav a:hover {
+    color: #c5cae9; /* Cor mais clara ao passar o mouse */
+}
+
+/* Estilos do conteúdo principal */
 main {
-    padding: 2em;
+    padding: 2em 1em;
     max-width: 960px;
-    margin: 20px auto;
+    margin: 20px auto; /* Centraliza o conteúdo */
 }
 
+h2 {
+    color: #fff;
+    border-bottom: 2px solid #3f51b5; /* Linha de destaque para o título */
+    padding-bottom: 0.5em;
+    margin-top: 2em;
+}
+
+/* Estilos dos artigos */
 .categoria {
-    background-color: #fff; /* Fundo branco para os artigos */
+    background-color: #fff;
     color: #333;
-    padding: 1.5em;
+    padding: 2em; /* Aumentado o padding interno */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1em; /* Adicionado para separar os artigos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+    margin-bottom: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.categoria:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
 }
 
 .categoria h3 {
-    color: #1976d2; /* Azul mais claro para os títulos dos artigos */
+    color: #1976d2;
     margin-top: 0;
-}
-
-.categoria small {
-    color: #777;
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-.categoria p {
-    color: #555;
-    margin-bottom: 1em;
 }
 
 .categoria a {
@@ -83,16 +99,10 @@ main {
     font-weight: bold;
 }
 
+/* Estilos do rodapé */
 footer {
     background-color: #1a237e;
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-body {
-    padding-bottom: 50px;
 }
