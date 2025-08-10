@@ -3,106 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verso Solto</title>
+  <title>Educação Física | Verso Solto</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #005fa3; /* fundo azul */
-      color: #ffffff;
-    }
-
-    nav {
-      background-color: #003f70;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    nav a {
-      color: #ffffff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-      color: #aad4ff;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 2em;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-
-    p {
-      text-align: center;
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 1.1em;
-    }
-
-    .categorias {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
-      padding: 40px 20px;
-      background-color: #005fa3;
-    }
-
-    .categoria {
-      background-color: #ffffff;
-      color: #222222;
-      padding: 25px;
-      border-radius: 12px;
-      width: 280px;
-      text-align: center;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .categoria:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    .categoria h3 {
-      margin-bottom: 12px;
-      font-size: 1.3em;
-      color: #005fa3;
-    }
-
-    .categoria a {
-      display: inline-block;
-      margin-top: 12px;
-      color: #005fa3;
-      font-weight: bold;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: color 0.2s ease, border-bottom 0.2s ease;
-    }
-
-    .categoria a:hover {
-      text-decoration: none;
-      color: #003f70;
-      border-bottom: 2px solid #003f70;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #003f70;
-      color: #ffffff;
-      font-size: 0.9em;
-      margin-top: 40px;
-    }
-  </style>
 </head>
 <body>
 
@@ -114,21 +16,17 @@
     <a href="psicologia.html">Psicologia</a>
   </nav>
 
-  <h1>Bem-vindo ao meu espaço de ideias</h1>
-  <p>Este é um blog pessoal onde compartilho reflexões, estudos e pensamentos sobre temas que me inspiram.</p>
+  <h1>🏃 Educação Física</h1>
+  <p>Textos, reflexões e estudos sobre corpo, movimento e saúde.</p>
 
   <div class="categorias">
     <div class="categoria">
-      <h3>🏃 Educação Física</h3>
-      <a href="educacao-fisica.html">Ver mais</a>
+      <h3>A importância do aquecimento antes do treino</h3>
+      <a href="#">Ler artigo</a>
     </div>
     <div class="categoria">
-      <h3>🌍 Ciências Sociais</h3>
-      <a href="ciencias-sociais.html">Ver mais</a>
-    </div>
-    <div class="categoria">
-      <h3>🧠 Psicologia</h3>
-      <a href="psicologia.html">Ver mais</a>
+      <h3>Corpo e consciência: o papel da Educação Física na formação integral</h3>
+      <a href="#">Ler artigo</a>
     </div>
   </div>
 
