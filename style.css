@@ -71,16 +71,14 @@ nav a:hover {
     padding: 0 1em;
 }
 
-/* Faz o main ocupar todo o espaço disponível, se não houver sidebar */
 main {
-    flex: 1; 
+    flex: 3; /* O conteúdo principal ocupa 3 partes */
 }
 
-/* Ajusta o main para ocupar 3 partes quando há uma sidebar */
-.container:has(.sidebar) main {
-    flex: 3;
+/* Esta é a nova regra que corrige o problema de compatibilidade */
+.no-sidebar main {
+    flex: 1; /* Faz com que o main ocupe todo o espaço quando a barra lateral não está presente */
 }
-/* --- FIM DO CÓDIGO ATUALIZADO --- */
 
 .sidebar {
     flex: 1; /* A barra lateral ocupa 1 parte */
@@ -90,6 +88,7 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     align-self: flex-start; /* Fixa a barra lateral no topo */
 }
+/* --- FIM DO CÓDIGO ATUALIZADO --- */
 
 .sidebar h3 {
     margin-top: 0;
@@ -174,7 +173,6 @@ a {
     transition: color 0.3s ease;
 }
 
-/* Estilo para links quando o mouse passa por cima */
 a:hover {
     color: #1a237e;
 }
