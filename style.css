@@ -62,7 +62,7 @@ nav a:hover {
     color: #e8eaf6;
 }
 
-/* --- CÓDIGO ATUALIZADO PARA O LAYOUT COM E SEM BARRA LATERAL --- */
+/* --- LAYOUT COM E SEM BARRA LATERAL --- */
 .container {
     display: flex;
     max-width: 1200px;
@@ -72,23 +72,21 @@ nav a:hover {
 }
 
 main {
-    flex: 3; /* O conteúdo principal ocupa 3 partes */
+    flex: 3;
 }
 
-/* Esta é a nova regra que corrige o problema de compatibilidade */
 .no-sidebar main {
-    flex: 1; /* Faz com que o main ocupe todo o espaço quando a barra lateral não está presente */
+    flex: 1;
 }
 
 .sidebar {
-    flex: 1; /* A barra lateral ocupa 1 parte */
+    flex: 1;
     background-color: #fff;
     padding: 2em;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    align-self: flex-start; /* Fixa a barra lateral no topo */
+    align-self: flex-start;
 }
-/* --- FIM DO CÓDIGO ATUALIZADO --- */
 
 .sidebar h3 {
     margin-top: 0;
@@ -111,7 +109,6 @@ h2 {
     margin-top: 0;
 }
 
-/* CÓDIGO ATUALIZADO PARA LEGIBILIDADE E HOVER */
 .categoria {
     background-color: #fff;
     padding: 2em;
@@ -119,8 +116,8 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 1.5em;
     transition: transform 0.3s ease;
-    line-height: 1.8; /* Aumenta a distância entre as linhas para melhor leitura */
-    font-size: 1.1em; /* Aumenta o tamanho da fonte */
+    line-height: 1.8;
+    font-size: 1.1em;
 }
 
 .categoria:hover {
@@ -139,7 +136,6 @@ h2 {
     color: #3f51b5;
 }
 
-/* Estilos dos parágrafos dentro de um artigo */
 .categoria p {
     margin-bottom: 1.5em;
 }
@@ -153,22 +149,13 @@ footer {
     margin-top: 2em;
 }
 
-/* Media Queries para responsividade */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Em telas pequenas, os elementos se empilham */
-    }
-}
+/* --- Efeitos de Hover e Destaque --- */
 
-/* --- NOVO CÓDIGO: Efeitos de Hover e Destaque --- */
-
-/* Estilo para o link da página atual */
 nav a.active {
     border-bottom: 2px solid #fff;
     padding-bottom: 5px;
 }
 
-/* Efeito suave de transição para todos os links */
 a {
     transition: color 0.3s ease;
 }
@@ -177,7 +164,6 @@ a:hover {
     color: #1a237e;
 }
 
-/* Efeito de hover específico para a lista de artigos nas páginas de categoria */
 .categoria ul li a {
     color: #333;
     transition: color 0.3s ease;
@@ -188,7 +174,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Efeito de hover para o botão "Ler artigo" */
 .categoria a {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -196,4 +181,42 @@ a:hover {
 .categoria a:hover {
     background-color: #3f51b5;
     transform: scale(1.05);
+}
+
+/* --- INÍCIO DAS MEDIA QUERIES PARA RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    /* Layout em uma única coluna */
+    .container {
+        flex-direction: column;
+        padding: 0 1em;
+    }
+
+    /* Reduz o tamanho de fontes para facilitar a leitura */
+    .titulo-pagina {
+        font-size: 2em;
+    }
+    
+    header {
+        padding: 2em 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        margin-top: 1em;
+    }
+    
+    nav li {
+        display: block;
+        margin: 0;
+    }
+    
+    .categoria {
+        padding: 1.5em;
+    }
+
+    .categoria h2 {
+        font-size: 1.5em;
+    }
 }
