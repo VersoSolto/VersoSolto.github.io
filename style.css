@@ -62,7 +62,7 @@ nav a:hover {
     color: #e8eaf6;
 }
 
-/* Container principal e barra lateral */
+/* --- CÓDIGO ATUALIZADO PARA O LAYOUT COM E SEM BARRA LATERAL --- */
 .container {
     display: flex;
     max-width: 1200px;
@@ -71,9 +71,16 @@ nav a:hover {
     padding: 0 1em;
 }
 
+/* Faz o main ocupar todo o espaço disponível, se não houver sidebar */
 main {
-    flex: 3; /* O conteúdo principal ocupa 3 partes */
+    flex: 1; 
 }
+
+/* Ajusta o main para ocupar 3 partes quando há uma sidebar */
+.container:has(.sidebar) main {
+    flex: 3;
+}
+/* --- FIM DO CÓDIGO ATUALIZADO --- */
 
 .sidebar {
     flex: 1; /* A barra lateral ocupa 1 parte */
@@ -105,7 +112,7 @@ h2 {
     margin-top: 0;
 }
 
-/* --- CÓDIGO ATUALIZADO PARA LEGIBILIDADE --- */
+/* CÓDIGO ATUALIZADO PARA LEGIBILIDADE E HOVER */
 .categoria {
     background-color: #fff;
     padding: 2em;
@@ -137,8 +144,6 @@ h2 {
 .categoria p {
     margin-bottom: 1.5em;
 }
-/* --- FIM DO CÓDIGO ATUALIZADO --- */
-
 
 /* Estilos do rodapé */
 footer {
