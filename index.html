@@ -1,199 +1,54 @@
-/* Importando a fonte do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verso Solto | Blog Pessoal</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* Estilos globais e de corpo */
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: #f4f4f4; /* Fundo mais claro */
-    color: #333;
-    padding-bottom: 50px;
-}
+  <header>
+    <h1 class="titulo-pagina">Verso Solto</h1>
+    <p>Reflexões sobre corpo, mente e sociedade.</p>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="educacao-fisica.html">Educação Física</a></li>
+        <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
+        <li><a href="psicologia.html">Psicologia</a></li>
+        <li><a href="sobre.html">Sobre o Autor</a></li>
+      </ul>
+    </nav>
+  </header>
 
-/* Estilos do cabeçalho */
-header {
-    background-color: #283593;
-    color: #fff;
-    padding: 3em 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+  <div class="container">
+    <main>
+      <h2>Últimos posts</h2>
+      <article class="categoria">
+        <h3>O papel da cultura na construção da identidade</h3>
+        <small>Ciências Sociais | 10/08/2025</small>
+        <a href="ciencias-sociais/post1.html">Ler artigo</a>
+      </article>
 
-.titulo-pagina {
-    font-size: 2.8em;
-    margin-bottom: 0.2em;
-    font-weight: 700;
-}
+      <article class="categoria">
+        <h3>Título do Post Recente (Educação Física)</h3>
+        <a href="educacao-fisica/post1.html">Ler artigo</a>
+      </article>
+    </main>
 
-header p {
-    color: #e8eaf6;
-    font-size: 1.1em;
-}
+    <aside class="sidebar">
+      <h3>Sobre o Autor</h3>
+      <img src="images/Foto Post.png" alt="Foto do autor" class="perfil-img">
+      <p>André, criador do Verso Solto, é apaixonado por palavras e café. Compartilha neste espaço suas reflexões sobre as diversas áreas da vida.</p>
+      <a href="sobre.html">Leia a biografia completa...</a>
+    </aside>
+  </div>
 
-/* Estilos de navegação */
-nav {
-    background-color: #3f51b5;
-    padding: 0.8em 0;
-    text-align: center;
-}
+  <footer>
+    <p>&copy; 2025 Verso Solto. Todos os direitos reservados.</p>
+  </footer>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    display: inline;
-    margin: 0 1.5em;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #e8eaf6;
-}
-
-/* --- CÓDIGO ATUALIZADO PARA O LAYOUT COM E SEM BARRA LATERAL --- */
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    gap: 2em;
-    padding: 0 1em;
-}
-
-main {
-    flex: 3; /* O conteúdo principal ocupa 3 partes */
-}
-
-/* Esta é a nova regra! */
-.no-sidebar main {
-    flex: 1; /* Faz com que o main ocupe todo o espaço quando a barra lateral não está presente */
-}
-
-.sidebar {
-    flex: 1; /* A barra lateral ocupa 1 parte */
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    align-self: flex-start; /* Fixa a barra lateral no topo */
-}
-/* --- FIM DO CÓDIGO ATUALIZADO --- */
-
-.sidebar h3 {
-    margin-top: 0;
-    color: #283593;
-    font-weight: 700;
-}
-
-.perfil-img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1em;
-}
-
-/* Estilos dos artigos */
-h2 {
-    color: #283593;
-    border-bottom: 2px solid #c5cae9;
-    padding-bottom: 0.5em;
-    margin-top: 0;
-}
-
-/* CÓDIGO ATUALIZADO PARA LEGIBILIDADE E HOVER */
-.categoria {
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1.5em;
-    transition: transform 0.3s ease;
-    line-height: 1.8; /* Aumenta a distância entre as linhas para melhor leitura */
-    font-size: 1.1em; /* Aumenta o tamanho da fonte */
-}
-
-.categoria:hover {
-    transform: translateY(-5px);
-}
-
-.categoria h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: #283593;
-}
-
-.categoria h3 {
-    font-size: 1.5em;
-    margin-top: 1.5em;
-    color: #3f51b5;
-}
-
-/* Estilos dos parágrafos dentro de um artigo */
-.categoria p {
-    margin-bottom: 1.5em;
-}
-
-/* Estilos do rodapé */
-footer {
-    background-color: #283593;
-    color: #fff;
-    text-align: center;
-    padding: 1.5em 0;
-    margin-top: 2em;
-}
-
-/* Media Queries para responsividade */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Em telas pequenas, os elementos se empilham */
-    }
-}
-
-/* --- NOVO CÓDIGO: Efeitos de Hover e Destaque --- */
-
-/* Estilo para o link da página atual */
-nav a.active {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 5px;
-}
-
-/* Efeito suave de transição para todos os links */
-a {
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #1a237e;
-}
-
-/* Efeito de hover específico para a lista de artigos nas páginas de categoria */
-.categoria ul li a {
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.categoria ul li a:hover {
-    color: #283593;
-    text-decoration: underline;
-}
-
-/* Efeito de hover para o botão "Ler artigo" */
-.categoria a {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.categoria a:hover {
-    background-color: #3f51b5;
-    transform: scale(1.05);
-}
+</body>
+</html>
