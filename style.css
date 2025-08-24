@@ -6,7 +6,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #f4f4f4; /* Fundo mais claro */
+    background-color: #f4f4f4;
     color: #333;
     padding-bottom: 50px;
 }
@@ -94,21 +94,15 @@ main {
     font-weight: 700;
 }
 
-/* CÓDIGO CORRIGIDO: Ajusta o tamanho da imagem de perfil */
+/* Ajusta o tamanho da imagem de perfil para que fique como na imagem enviada */
 .perfil-img {
-    width: 150px; /* Reduz o tamanho da foto */
+    width: 150px;
     height: auto;
     border-radius: 50%;
     margin-bottom: 1em;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* CÓDIGO CORRIGIDO: Estilos para o texto de perfil na barra lateral */
-.perfil p {
-    font-size: 0.9em; /* Diminui o tamanho da fonte do texto de perfil */
-    line-height: 1.6;
 }
 
 /* Estilos para a seção de perfil na barra lateral */
@@ -240,7 +234,7 @@ a:hover {
     .titulo-pagina {
         font-size: 2em;
     }
-    
+
     header {
         padding: 2em 0;
     }
@@ -251,12 +245,12 @@ a:hover {
         gap: 0.5em;
         margin-top: 1em;
     }
-    
+
     nav li {
         display: block;
         margin: 0;
     }
-    
+
     .categoria {
         padding: 1.5em;
     }
