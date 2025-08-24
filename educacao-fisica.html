@@ -1,90 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Educação Física - Verso Solto</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Educação Física | Verso Solto</title>
+  <meta name="description" content="Textos sobre corpo, movimento e saúde." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="wrap">
-    
-    <!-- Cabeçalho -->
-    <header>
-      <div class="brand">
-        <div class="logo">VS</div>
-        <div>
-          <h1 class="titulo-pagina">Verso Solto</h1>
-          <p class="subtitulo">Reflexões e aprendizados</p>
-        </div>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">VS</div>
+      <div>
+        <div class="site-title">Verso Solto</div>
+        <div class="tagline">Reflexões sobre corpo, mente e sociedade.</div>
       </div>
-      
-      <!-- Menu -->
-      <nav>
-        <ul class="nav-list">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="portugues.html">Português</a></li>
-          <li><a href="matematica.html">Matemática</a></li>
-          <li><a href="historia.html">História</a></li>
-          <li><a href="geografia.html">Geografia</a></li>
-          <li><a href="ciencias.html">Ciências</a></li>
-          <li><a href="educacao-fisica.html" class="active">Educação Física</a></li>
-          <li><a href="artes.html">Artes</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- Conteúdo principal -->
-    <div class="container">
-      
-      <!-- Main -->
-      <main>
-        <section class="card">
-          <h2 class="section-title">Educação Física</h2>
-          <p>Bem-vindo à seção de Educação Física do <strong>Verso Solto</strong>. Aqui você encontra reflexões, artigos e conteúdos sobre saúde, esportes, movimento corporal e qualidade de vida.</p>
-        </section>
-
-        <!-- Posts -->
-        <article class="card post-resumo">
-          <h3><a href="#">Benefícios da Atividade Física Regular</a></h3>
-          <p class="post-meta">Publicado em 22 de Agosto de 2025</p>
-          <p>Descubra como a prática constante de atividades físicas pode melhorar não só o corpo, mas também a mente e a vida social.</p>
-          <a href="#" class="ler-artigo">Ler artigo completo →</a>
-        </article>
-
-        <article class="card post-resumo">
-          <h3><a href="#">Alongamentos Essenciais para o Dia a Dia</a></h3>
-          <p class="post-meta">Publicado em 10 de Agosto de 2025</p>
-          <p>Aprenda alongamentos simples e eficazes que podem ser feitos em casa ou no trabalho para evitar dores musculares.</p>
-          <a href="#" class="ler-artigo">Ler artigo completo →</a>
-        </article>
-      </main>
-
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <div class="card perfil">
-          <img src="img/perfil.jpg" alt="Foto do autor" class="perfil-img">
-          <h3>André Carvalho</h3>
-          <p>Professor e escritor. Aqui compartilho ideias e reflexões sobre o aprendizado em várias disciplinas.</p>
-        </div>
-
-        <div class="card">
-          <h3>Buscar</h3>
-          <input type="text" placeholder="Digite para pesquisar..." class="search">
-        </div>
-
-        <div class="card">
-          <h3>Assine a Newsletter</h3>
-          <p>Receba atualizações direto no seu e-mail.</p>
-          <a href="#" class="btn">Assinar</a>
-        </div>
-      </aside>
     </div>
+    <nav aria-label="Navegação principal">
+      <ul class="nav">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="educacao-fisica.html" class="active">Educação Física</a></li>
+        <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
+        <li><a href="psicologia.html">Psicologia</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Rodapé -->
-    <footer>
-      <p>© 2025 Verso Solto — Todos os direitos reservados.</p>
-    </footer>
+  <div class="container">
+    <main>
+      <section class="paper" aria-label="Introdução">
+        <h1>Educação Física</h1>
+        <p>Textos, reflexões e estudos sobre corpo, movimento e saúde.</p>
+      </section>
+
+      <section class="card" style="margin-top:14px" aria-label="Artigos">
+        <h2>Artigos</h2>
+        <article class="post">
+          <h3 class="post-title"><a href="educacao-fisica/post1.html">A importância do aquecimento antes do treino</a></h3>
+          <div class="post-meta">Publicado em 13/08/2025</div>
+        </article>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Sobre o Autor</h3>
+        <img src="images/Foto Post.png" alt="Foto de André" class="perfil-img" />
+        <p>André cultiva ideias de corpo em movimento — cuidado, presença, poesia do gesto.</p>
+      </div>
+
+      <div class="card">
+        <h3>Buscar</h3>
+        <form action="busca.html" method="get" role="search">
+          <label for="q" class="visually-hidden">Buscar</label>
+          <input id="q" name="q" class="search" placeholder="Palavras-chave…" />
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Assine</h3>
+        <p class="muted">Receba novos textos por e-mail.</p>
+        <a class="btn" href="assinatura.html">Assinar newsletter</a>
+      </div>
+    </aside>
   </div>
+
+  <footer>
+    <p>© 2025 Verso Solto — Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
