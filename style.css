@@ -83,15 +83,15 @@ nav a.active {
     margin: 20px auto;
     gap: 2em;
     padding: 0 1em;
-    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+    flex: 1;
 }
 
 main {
-    flex: 3; /* Área principal mais larga */
+    flex: 3;
 }
 
 .sidebar {
-    flex: 1; /* Barra lateral mais estreita */
+    flex: 1;
     background-color: #fff;
     padding: 2em;
     border-radius: 8px;
@@ -261,12 +261,19 @@ a:hover {
     }
 }
 
-/* ======== NOVA REGRA: esconder sidebar vazia ======== */
+/* ======== NOVAS REGRAS ======== */
+/* Esconde a sidebar se não tiver conteúdo visível */
 .sidebar:empty {
     display: none;
 }
 
-/* Quando a sidebar some, o main ocupa toda a largura */
+/* Faz o main ocupar toda a largura quando não houver sidebar */
+.container:not(:has(.sidebar)),
+.container:has(.sidebar:empty) {
+    justify-content: flex-start;
+}
+
+.container:not(:has(.sidebar)) main,
 .container:has(.sidebar:empty) main {
     flex: 1;
 }
