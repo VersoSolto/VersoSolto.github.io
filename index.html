@@ -1,64 +1,164 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verso Solto | Um blog de reflexões</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verso Solto | Reflexões sobre corpo, mente e sociedade</title>
+  <meta name="description" content="Verso Solto — reflexões sobre corpo, mente e sociedade. Textos sobre psicologia, ciências sociais e educação física escritos por André.">
+
+  <!-- Open Graph / Twitter cards -->
+  <meta property="og:site_name" content="Verso Solto">
+  <meta property="og:title" content="Verso Solto | Reflexões sobre corpo, mente e sociedade">
+  <meta property="og:description" content="Textos sobre psicologia, ciências sociais e educação física por André.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://versosolto.github.io/">
+  <meta property="og:image" content="/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico">
+
+  <style>
+    :root{
+      --bg:#fafafa; --card:#ffffff; --text:#0f1720; --muted:#56606a; --accent:#1463a6;
+      --radius:12px; --gap:18px; --max-width:1050px;
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:60px;height:60px;border-radius:10px;background:linear-gradient(135deg,#eaf4ff,#f7fbff);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;color:var(--accent)}
+    .titulo{margin:0}
+    .subtitulo{margin:4px 0 0;color:var(--muted)}
+
+    nav ul{list-style:none;padding:0;margin:0;display:flex;gap:10px;flex-wrap:wrap}
+    nav a{padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a.active{background:var(--accent);color:white}
+
+    .container{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:22px}
+    @media (max-width:900px){.container{grid-template-columns:1fr} .sidebar{order:2}}
+
+    main .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 8px 20px rgba(15,20,25,0.04)}
+    h2{margin-top:0}
+
+    .post-resumo{border-bottom:1px solid #f0f0f0;padding:14px 0}
+    .post-resumo h3{margin:0 0 8px;font-size:1.1rem}
+    .post-resumo p{margin:0 0 8px;color:var(--muted)}
+    .post-meta{font-size:0.9rem;color:var(--muted);display:flex;gap:10px;align-items:center}
+    .ler-artigo{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;background:#f1f8ff;border:1px solid #e6f0ff;color:var(--accent);font-weight:600}
+
+    .sidebar .card{padding:16px}
+    .perfil-img{width:100%;height:auto;border-radius:8px;display:block;margin:12px 0}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* Search box */
+    .search{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee}
+
+    /* Focus states for accessibility */
+    a:focus, button:focus, input:focus{outline:3px solid rgba(20,105,180,0.15);outline-offset:3px}
+
+    /* Utility */
+    .muted{color:var(--muted)}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"Verso Solto",
+    "url":"https://versosolto.github.io/",
+    "author": {"@type":"Person","name":"André"}
+  }
+  </script>
 </head>
 <body>
-
+  <div class="wrap">
     <header>
-        <h1 class="titulo-pagina">Verso Solto</h1>
-        <p>Reflexões sobre corpo, mente e sociedade.</p>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Início</a></li>
-                <li><a href="educacao-fisica.html">Educação Física</a></li>
-                <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
-                <li><a href="psicologia.html">Psicologia</a></li>
-                <li><a href="sobre.html">Sobre o Autor</a></li>
-            </ul>
-        </nav>
+      <div class="brand">
+        <div class="logo" aria-hidden>VS</div>
+        <div>
+          <h1 class="titulo">Verso Solto</h1>
+          <p class="subtitulo">Reflexões sobre corpo, mente e sociedade.</p>
+        </div>
+      </div>
+
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="/index.html" class="active">Início</a></li>
+          <li><a href="/educacao-fisica.html">Educação Física</a></li>
+          <li><a href="/ciencias-sociais.html">Ciências Sociais</a></li>
+          <li><a href="/psicologia.html">Psicologia</a></li>
+          <li><a href="/sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
     </header>
 
     <div class="container">
+      <main>
+        <section class="card">
+          <h2>Últimos posts</h2>
 
-        <main>
-            <section>
-                <h2>Últimos posts</h2>
+          <article class="post-resumo" aria-labelledby="post1-title">
+            <h3 id="post1-title"><a href="/psicologia/post1.html">A Armadilha da Comparação Social</a></h3>
+            <p>Sabe aquela sensação? Você abre o Instagram e vê a foto da viagem perfeita de um amigo. Entra no LinkedIn e descobre que um colega de faculdade acab...</p>
+            <div class="post-meta"><span>Psicologia</span><span aria-hidden>·</span><time datetime="2025-08-23">23 de agosto de 2025</time></div>
+            <a href="/psicologia/post1.html" class="ler-artigo">Ler artigo</a>
+          </article>
 
-                <article class="post-resumo">
-                    <h3><a href="psicologia/post1.html">A Armadilha da Comparação Social</a></h3>
-                    <p>Sabe aquela sensação? Você abre o Instagram e vê a foto da viagem perfeita de um amigo. Entra no LinkedIn e descobre que um colega de faculdade acab...</p>
-                    <small>Psicologia | 23/08/2025</small>
-                    <a href="psicologia/post1.html" class="ler-artigo">Ler artigo</a>
-                </article>
+          <article class="post-resumo" aria-labelledby="post2-title">
+            <h3 id="post2-title"><a href="/ciencias-sociais/post1.html">O papel da cultura na construção da identidade</a></h3>
+            <p>A cultura é como o ar que respiramos: invisível, mas essencial. Ela molda quem somos, nossos valores e a forma como vemos o mundo. Neste artigo, vam...</p>
+            <div class="post-meta"><span>Ciências Sociais</span><span aria-hidden>·</span><time datetime="2025-08-10">10 de agosto de 2025</time></div>
+            <a href="/ciencias-sociais/post1.html" class="ler-artigo">Ler artigo</a>
+          </article>
 
-                <article class="post-resumo">
-                    <h3><a href="ciencias-sociais/post1.html">O papel da cultura na construção da identidade</a></h3>
-                    <p>A cultura é como o ar que respiramos: invisível, mas essencial. Ela molda quem somos, nossos valores e a forma como vemos o mundo. Neste artigo, vam...</p>
-                    <small>Ciências Sociais | 10/08/2025</small>
-                    <a href="ciencias-sociais/post1.html" class="ler-artigo">Ler artigo</a>
-                </article>
+        </section>
+      </main>
 
-            </section>
-        </main>
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Sobre o Autor</h3>
+          <img src="/images/foto-perfil.jpg" alt="Foto do autor André" class="perfil-img">
+          <p><strong>André</strong> habita o Verso Solto como quem cultiva um jardim de ideias: umas florescem, outras instigam — todas convidam a olhar a vida de ângulos improváveis.</p>
+        </div>
 
-        <aside class="sidebar">
-            <div class="perfil">
-                <h3>Sobre o Autor</h3>
-                <img src="images/Foto Post.png" alt="Foto de perfil" class="perfil-img">
-                <p>André habita o Verso Solto como quem cultiva um jardim de ideias: umas florescem, outras instigam — todas convidam a olhar a vida de ângulos improváveis.</p>
-            </div>
-        </aside>
+        <div class="card" style="margin-top:12px">
+          <h4>Buscar</h4>
+          <form action="/busca.html" method="get" role="search">
+            <label for="q" class="visually-hidden">Buscar no blog</label>
+            <input id="q" name="q" class="search" placeholder="Pesquisar artigos...">
+          </form>
+        </div>
 
+        <div class="card" style="margin-top:12px">
+          <h4>Assine</h4>
+          <p class="muted">Receba novos posts por e-mail.</p>
+          <a class="btn" href="/assinatura.html">Assinar newsletter</a>
+        </div>
+      </aside>
     </div>
 
     <footer>
-        <p>© 2025 Verso Solto. Todos os direitos reservados.</p>
+      <p>© 2025 Verso Solto. Todos os direitos reservados. · <a href="/privacy.html">Política de Privacidade</a> · <a href="/feed.xml">RSS</a></p>
     </footer>
+  </div>
 
+  <script>
+    // melhora de acessibilidade: detecta JS e adiciona classe (útil para features progressivas)
+    document.documentElement.classList.add('js');
+  </script>
 </body>
 </html>
