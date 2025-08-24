@@ -260,3 +260,13 @@ a:hover {
         font-size: 1.5em;
     }
 }
+
+/* ======== NOVA REGRA: esconder sidebar vazia ======== */
+.sidebar:empty {
+    display: none;
+}
+
+/* Quando a sidebar some, o main ocupa toda a largura */
+.container:has(.sidebar:empty) main {
+    flex: 1;
+}
