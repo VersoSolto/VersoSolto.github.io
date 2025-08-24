@@ -1,7 +1,7 @@
 /* Importando a fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-/* ======== ESTILOS GLOBAIS ======== */
+/* Estilos globais e de corpo */
 html, body {
     height: 100%;
 }
@@ -20,7 +20,7 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
-/* ======== CABEÇALHO ======== */
+/* Cabeçalho */
 header {
     background-color: #283593;
     color: #fff;
@@ -40,7 +40,7 @@ header p {
     font-size: 1.1em;
 }
 
-/* ======== NAVEGAÇÃO ======== */
+/* Navegação */
 nav {
     background-color: #3f51b5;
     padding: 0.8em 0;
@@ -76,7 +76,7 @@ nav a.active {
     padding-bottom: 5px;
 }
 
-/* ======== LAYOUT PRINCIPAL ======== */
+/* Layout Principal */
 .container {
     display: flex;
     max-width: 1200px;
@@ -86,6 +86,7 @@ nav a.active {
     flex: 1;
 }
 
+/* Conteúdo principal e barra lateral */
 main {
     flex: 3;
 }
@@ -99,21 +100,29 @@ main {
     align-self: flex-start;
 }
 
+/* Esconde a barra lateral e expande o conteúdo quando a classe 'no-sidebar' é usada */
+.no-sidebar {
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px; /* Limita a largura do conteúdo para que não ocupe toda a tela */
+}
+
 .no-sidebar main {
     flex: 1;
+    width: 100%;
 }
 
 .no-sidebar .sidebar {
     display: none;
 }
 
-/* ======== PERFIL NA SIDEBAR ======== */
+/* Perfil na Sidebar */
 .perfil {
     text-align: center;
 }
 
 .perfil-img {
-    width: 150px;
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho da barra lateral */
     height: auto;
     border-radius: 50%;
     margin-bottom: 1em;
@@ -122,7 +131,7 @@ main {
     margin-right: auto;
 }
 
-/* ======== POSTS ======== */
+/* Artigos */
 h2 {
     color: #283593;
     border-bottom: 2px solid #c5cae9;
@@ -159,7 +168,7 @@ h2 {
     text-decoration: underline;
 }
 
-/* ======== CATEGORIAS ======== */
+/* Categorias */
 .categoria {
     background-color: #fff;
     padding: 2em;
@@ -191,7 +200,7 @@ h2 {
     margin-bottom: 1.5em;
 }
 
-/* ======== RODAPÉ ======== */
+/* Rodapé */
 footer {
     background-color: #283593;
     color: #fff;
@@ -200,7 +209,7 @@ footer {
     margin-top: 2em;
 }
 
-/* ======== LINKS E EFEITOS ======== */
+/* Links e efeitos */
 a {
     transition: color 0.3s ease;
 }
@@ -228,7 +237,7 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* ======== RESPONSIVIDADE ======== */
+/* Responsividade */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
