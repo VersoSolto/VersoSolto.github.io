@@ -1,232 +1,32 @@
-/* Importando a fonte do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
-/* Estilos globais e de corpo */
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: #f4f4f4; /* Fundo mais claro */
-    color: #333;
-    padding-bottom: 50px;
-}
-
-/* Estilos do cabeçalho */
-header {
-    background-color: #283593;
-    color: #fff;
-    padding: 3em 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.titulo-pagina {
-    font-size: 2.8em;
-    margin-bottom: 0.2em;
-    font-weight: 700;
-}
-
-header p {
-    color: #e8eaf6;
-    font-size: 1.1em;
-}
-
-/* Estilos de navegação */
-nav {
-    background-color: #3f51b5;
-    padding: 0.8em 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    display: inline;
-    margin: 0 1.5em;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #e8eaf6;
-}
-
-/* --- LAYOUT COM E SEM BARRA LATERAL --- */
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    gap: 2em;
-    padding: 0 1em;
-}
-
-main {
-    flex: 3;
-}
-
-.no-sidebar main {
-    flex: 1;
-}
-
+/* Estilos da barra lateral */
 .sidebar {
-    flex: 1;
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    align-self: flex-start;
+    flex: 1;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    align-self: flex-start;
 }
 
 .sidebar h3 {
-    margin-top: 0;
-    color: #283593;
-    font-weight: 700;
+    margin-top: 0;
+    color: #283593;
+    font-weight: 700;
 }
 
-/* NOVO CÓDIGO: Ajusta a imagem de perfil */
+/* Ajusta o tamanho da imagem de perfil */
 .perfil-img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da coluna */
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px; /* Ajusta a largura da foto para um tamanho fixo */
+    width: 150px; /* Altere para o tamanho que preferir */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1em;
+    display: block; /* Garante que a imagem esteja em um bloco próprio */
+    margin-left: auto; /* Centraliza a imagem na barra lateral */
+    margin-right: auto;
 }
 
-/* Ajusta a formatação do perfil para a página inicial */
-.perfil {
-    text-align: center; /* Centraliza a foto e o texto na página inicial */
+/* Ajusta o tamanho da fonte do texto "Sobre o Autor" */
+.sidebar p {
+    font-size: 0.9em; /* Você pode alterar o tamanho da fonte aqui */
+    line-height: 1.6;
 }
-
-
-/* Estilos dos artigos */
-h2 {
-    color: #283593;
-    border-bottom: 2px solid #c5cae9;
-    padding-bottom: 0.5em;
-    margin-top: 0;
-}
-
-/* Estilos dos resumos de post na página inicial */
-.post-resumo {
-    background-color: #fff;
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5em;
-    line-height: 1.6;
-}
-
-.post-resumo h3 a {
-    color: #283593;
-    text-decoration: none;
-}
-
-.post-resumo h3 a:hover {
-    text-decoration: underline;
-}
-
-.ler-artigo {
-    display: inline-block;
-    margin-top: 1em;
-    color: #3f51b5;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.ler-artigo:hover {
-    text-decoration: underline;
-}
-
-.categoria {
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1.5em;
-    transition: transform 0.3s ease;
-    line-height: 1.8;
-    font-size: 1.1em;
-}
-
-.categoria:hover {
-    transform: translateY(-5px);
-}
-
-.categoria h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: #283593;
-}
-
-.categoria h3 {
-    font-size: 1.5em;
-    margin-top: 1.5em;
-    color: #3f51b5;
-}
-
-.categoria p {
-    margin-bottom: 1.5em;
-}
-
-/* Estilos do rodapé */
-footer {
-    background-color: #283593;
-    color: #fff;
-    text-align: center;
-    padding: 1.5em 0;
-    margin-top: 2em;
-}
-
-/* --- Efeitos de Hover e Destaque --- */
-nav a.active {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 5px;
-}
-
-a {
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #1a237e;
-}
-
-.categoria ul li a {
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.categoria ul li a:hover {
-    color: #283593;
-    text-decoration: underline;
-}
-
-.categoria a {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.categoria a:hover {
-    background-color: #3f51b5;
-    transform: scale(1.05);
-}
-
-/* --- INÍCIO DAS MEDIA QUERIES PARA RESPONSIVIDADE --- */
-@media (max-width: 768px) {
-    /* Layout em uma única coluna */
-    .container {
-        flex-direction: column;
-        padding: 0 1em;
