@@ -96,14 +96,13 @@ main {
 
 /* NOVO CÓDIGO: Ajusta a imagem de perfil */
 .perfil-img {
-    max-width: 100%;
+    width: 150px; /* Define um tamanho fixo menor para a foto */
     height: auto;
     border-radius: 50%;
     margin-bottom: 1em;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 200px; /* Define um tamanho fixo para a foto */
 }
 
 /* Estilos para a seção de perfil na barra lateral */
@@ -117,6 +116,50 @@ h2 {
     border-bottom: 2px solid #c5cae9;
     padding-bottom: 0.5em;
     margin-top: 0;
+}
+
+/* NOVO CÓDIGO: Ajusta a largura da linha de "Últimos posts" e "Sobre o Autor" na página inicial */
+.container main h2 {
+    flex: 1;
+    border-bottom: 2px solid #c5cae9;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+}
+
+.container aside h3 {
+    width: 100%;
+}
+
+
+/* Estilos para os resumos de post na página inicial */
+.post-resumo {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
+.post-resumo h3 a {
+    color: #283593;
+    text-decoration: none;
+}
+
+.post-resumo h3 a:hover {
+    text-decoration: underline;
+}
+
+.ler-artigo {
+    display: inline-block;
+    margin-top: 1em;
+    color: #3f51b5;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.ler-artigo:hover {
+    text-decoration: underline;
 }
 
 .categoria {
@@ -148,37 +191,6 @@ h2 {
 
 .categoria p {
     margin-bottom: 1.5em;
-}
-
-/* NOVO CÓDIGO: Estilos para os resumos de post na página inicial */
-.post-resumo {
-    background-color: #fff;
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5em;
-    line-height: 1.6;
-}
-
-.post-resumo h3 a {
-    color: #283593;
-    text-decoration: none;
-}
-
-.post-resumo h3 a:hover {
-    text-decoration: underline;
-}
-
-.ler-artigo {
-    display: inline-block;
-    margin-top: 1em;
-    color: #3f51b5;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.ler-artigo:hover {
-    text-decoration: underline;
 }
 
 /* Estilos do rodapé */
@@ -221,42 +233,4 @@ a:hover {
 .categoria a:hover {
     background-color: #3f51b5;
     transform: scale(1.05);
-}
-
-/* --- INÍCIO DAS MEDIA QUERIES PARA RESPONSIVIDADE --- */
-@media (max-width: 768px) {
-    /* Layout em uma única coluna */
-    .container {
-        flex-direction: column;
-        padding: 0 1em;
-    }
-
-    /* Reduz o tamanho de fontes para facilitar a leitura */
-    .titulo-pagina {
-        font-size: 2em;
-    }
-    
-    header {
-        padding: 2em 0;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        margin-top: 1em;
-    }
-    
-    nav li {
-        display: block;
-        margin: 0;
-    }
-    
-    .categoria {
-        padding: 1.5em;
-    }
-
-    .categoria h2 {
-        font-size: 1.5em;
-    }
 }
