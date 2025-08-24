@@ -1,7 +1,6 @@
-/* Verso Solto — style.css (versão melhorada)
-   Recomendo remover o `@import` e usar a link tag no <head>:
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-*/
+/* Verso Solto — style.css
+   Coloque este arquivo em /style.css no seu repo.
+   Fonte carregada via <link> no HTML (não use @import). */
 
 /* ========== Variáveis e reset simples ========== */
 :root{
@@ -9,8 +8,8 @@
   --card: #ffffff;
   --text: #222831;
   --muted: #56606a;
-  --accent: #283593;      /* cor principal (header/nav) */
-  --accent-2: #3f51b5;    /* tom secundário usado em destaques */
+  --accent: #283593;
+  --accent-2: #3f51b5;
   --link: #1a237e;
   --radius: 10px;
   --max-width: 1200px;
@@ -19,14 +18,13 @@
   --shadow-subtle: 0 2px 6px rgba(16,24,40,0.04);
   --transition: 180ms ease;
   font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-  color-scheme: light;
 }
 
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 img{max-width:100%;height:auto;display:block}
 
-/* ========== Acessibilidade / utilitários ========== */
+/* ========== Utilitários de acessibilidade ========== */
 .skip-link{
   position: absolute;
   left: -9999px;
@@ -46,11 +44,8 @@ img{max-width:100%;height:auto;display:block}
   box-shadow:var(--shadow-soft);
   z-index:999;
 }
-
-/* Visually-hidden utility */
 .sr-only{
-  position:absolute!important;
-  width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+  position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
 }
 
 /* ========== Layout principal ========== */
@@ -65,7 +60,6 @@ body{
   min-height:100vh;
 }
 
-/* Wrapper central */
 .wrap{
   width:100%;
   max-width:var(--max-width);
@@ -86,7 +80,6 @@ header{
   gap:1rem;
   flex-wrap:wrap;
 }
-
 .brand{display:flex;align-items:center;gap:14px}
 .logo{
   width:56px;height:56px;border-radius:10px;
@@ -95,9 +88,9 @@ header{
   font-weight:700;font-size:1.05rem;border:2px solid rgba(255,255,255,0.06)
 }
 .titulo-pagina{font-size:1.6rem;margin:0;font-weight:700}
-header p{margin:0;color:rgba(255,255,255,0.92);font-size:0.95rem}
+.subtitulo{margin:0;color:rgba(255,255,255,0.92);font-size:0.95rem}
 
-/* Nav (desktop) */
+/* Nav */
 nav{display:flex;align-items:center;gap:0.25rem}
 .nav-list{list-style:none;padding:0;margin:0;display:flex;gap:0.6rem;flex-wrap:wrap}
 .nav-list li{display:inline}
@@ -110,7 +103,7 @@ nav{display:flex;align-items:center;gap:0.25rem}
 .nav-list a:focus{background:rgba(255,255,255,0.06);transform:translateY(-2px)}
 .nav-list a.active{background:#fff;color:var(--accent);box-shadow:var(--shadow-subtle)}
 
-/* ========== Container: main + sidebar ========== */
+/* Container: main + sidebar */
 .container{
   display:grid;
   grid-template-columns: 1fr 320px;
@@ -118,102 +111,57 @@ nav{display:flex;align-items:center;gap:0.25rem}
   margin-top:18px;
   align-items:start;
 }
+.container.no-sidebar{grid-template-columns: 1fr;max-width:900px;justify-items:center}
 
-/* When no sidebar is desired, add .no-sidebar to .container-parent (see HTML) */
-.container.no-sidebar{
-  grid-template-columns: 1fr;
-  justify-items:center;
-  max-width:900px;
-}
+/* Cards & main */
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow-subtle)}
+.section-title{margin-top:0;color:var(--accent);border-bottom:2px solid rgba(197,202,233,0.4);padding-bottom:0.5rem;margin-bottom:0.8rem}
 
-/* Main card */
-main{
-  min-width:0;
-}
-.card{
-  background:var(--card);
-  padding:18px;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow-subtle);
-}
-
-/* Posts list */
-h2.section-title{
-  margin-top:0;
-  color:var(--accent);
-  border-bottom:2px solid rgba(197,202,233,0.4);
-  padding-bottom:0.5rem;
-  margin-bottom:0.8rem;
-}
-
-.post-resumo{
-  background:var(--card);
-  padding:1.2rem;
-  border-radius:8px;
-  box-shadow:var(--shadow-subtle);
-  margin-bottom:1rem;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
+/* Posts */
+.post-resumo{background:var(--card);padding:1.2rem;border-radius:8px;box-shadow:var(--shadow-subtle);margin-bottom:1rem;transition: transform var(--transition), box-shadow var(--transition)}
 .post-resumo:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}
 .post-resumo h3{margin:0 0 0.5rem;font-size:1.05rem}
 .post-resumo h3 a{color:var(--accent-2);text-decoration:none}
 .post-resumo p{margin:0 0 0.6rem;color:var(--muted)}
 .post-meta{font-size:0.9rem;color:var(--muted);display:flex;gap:8px;align-items:center}
-.post-meta time{font-style:normal}
-
-/* Ler artigo button/link */
-.ler-artigo{
-  display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;
-  background:transparent;border:1px solid rgba(34,40,48,0.06);
-  color:var(--accent-2);font-weight:700;text-decoration:none;
-  transition:background var(--transition), transform var(--transition);
-}
+.ler-artigo{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(34,40,48,0.06);color:var(--accent-2);font-weight:700;text-decoration:none;transition:background var(--transition), transform var(--transition)}
 .ler-artigo:hover{background:#f1f8ff;transform:translateY(-3px)}
 
-/* ========== Sidebar ========== */
+/* Sidebar */
 .sidebar{position:relative;align-self:start}
 .sidebar .card{padding:16px}
 .perfil{text-align:center}
 .perfil-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block;box-shadow:var(--shadow-subtle)}
-/* Use imagem sem espaços no nome: e.g. foto-perfil.jpg */
 
-/* Search and newsletter */
+/* Search / newsletter */
 .search{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-top:8px}
 .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent-2);color:#fff;text-decoration:none;font-weight:700;margin-top:12px}
 
-/* ========== Categorias / cards maiores ========== */
-.categoria{
-  background:var(--card);padding:1.2rem;border-radius:8px;box-shadow:var(--shadow-subtle);
-  margin-bottom:1rem;transition:transform var(--transition);
-}
+/* Categorias */
+.categoria{background:var(--card);padding:1.2rem;border-radius:8px;box-shadow:var(--shadow-subtle);margin-bottom:1rem;transition:transform var(--transition)}
 .categoria:hover{transform:translateY(-4px)}
 .categoria h2{margin:0 0 0.5rem;color:var(--accent)}
 .categoria h3{margin-top:1rem;color:var(--accent-2)}
 
-/* ========== Footer ========== */
-footer{
-  margin-top:28px;background:var(--accent);color:#fff;text-align:center;padding:1rem;border-radius:10px;
-  box-shadow:var(--shadow-soft)
-}
+/* Footer */
+footer{margin-top:28px;background:var(--accent);color:#fff;text-align:center;padding:1rem;border-radius:10px;box-shadow:var(--shadow-soft)}
 footer a{color:rgba(255,255,255,0.95);text-decoration:underline}
 
-/* ========== Links / hover / focus states ========== */
+/* Links / focus */
 a{transition:color var(--transition)}
 a:hover{color:var(--link)}
 a:focus{outline:3px solid rgba(40,53,147,0.12);outline-offset:3px;border-radius:6px}
 
-/* ========== Responsividade ========== */
+/* Responsividade */
 @media (max-width: 980px){
   .container{grid-template-columns:1fr 300px}
   .logo{width:52px;height:52px}
   .perfil-img{width:140px;height:140px}
 }
-
 @media (max-width: 760px){
   header{padding:1.25rem;border-radius:8px}
   .wrap{margin:16px auto;padding:0 0.75rem}
   .titulo-pagina{font-size:1.25rem}
-  nav{width:100%}
   .nav-list{flex-direction:column;gap:0.25rem}
   .nav-list a{padding:10px;border-radius:6px}
   .container{grid-template-columns:1fr;gap:14px}
@@ -222,7 +170,7 @@ a:focus{outline:3px solid rgba(40,53,147,0.12);outline-offset:3px;border-radius:
   .categoria{padding:1rem}
 }
 
-/* ========== Print-friendly tweaks ========== */
+/* Impressão */
 @media print{
   header, footer, .sidebar, .nav-list{display:none}
   .wrap{max-width:100%;margin:0;padding:0}
