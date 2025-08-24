@@ -5,64 +5,81 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verso Solto — Reflexões sobre corpo, mente e sociedade</title>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="sticky-header">
-  <div class="brand">
-    <div class="logo">VS</div>
-    <div>
-      <h1 class="titulo-pagina">Verso Solto</h1>
-      <p class="subtitulo">Reflexões sobre corpo, mente e sociedade.</p>
+<div class="wrap">
+  <header class="sticky-header">
+    <div class="brand">
+      <div class="logo">VS</div>
+      <div>
+        <h1 class="titulo-pagina">Verso Solto</h1>
+        <p class="subtitulo">Reflexões sobre corpo, mente e sociedade.</p>
+      </div>
     </div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="educacao-fisica.html">Educação Física</a></li>
+        <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
+        <li><a href="psicologia.html">Psicologia</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main>
+      <section class="card">
+        <h2 class="section-title">Últimos posts</h2>
+
+        <article class="post-resumo">
+          <span class="badge">Psicologia</span>
+          <h3><a href="psicologia/post1.html">A Armadilha da Comparação Social</a></h3>
+          <p>Sabe aquela sensação? Você abre o Instagram e vê a foto da viagem perfeita de um amigo...</p>
+          <div class="post-meta"><time datetime="2025-08-23">23 de agosto de 2025</time></div>
+          <a href="psicologia/post1.html" class="ler-artigo">Ler artigo</a>
+        </article>
+
+        <article class="post-resumo">
+          <span class="badge">Ciências Sociais</span>
+          <h3><a href="ciencias-sociais/post1.html">O papel da cultura na construção da identidade</a></h3>
+          <p>A cultura é como o ar que respiramos: invisível, mas essencial. Ela molda quem somos, nossos valores e a forma como vemos o mundo.</p>
+          <div class="post-meta"><time datetime="2025-08-10">10 de agosto de 2025</time></div>
+          <a href="ciencias-sociais/post1.html" class="ler-artigo">Ler artigo</a>
+        </article>
+
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="card perfil-card">
+        <h3>Sobre o Autor</h3>
+        <img src="images/foto-perfil.jpg" alt="Foto do autor André" class="perfil-img">
+        <p><strong>André</strong> cultiva um jardim de ideias: umas florescem, outras instigam — todas convidam a olhar a vida de ângulos improváveis.</p>
+      </div>
+
+      <div class="card">
+        <h4>Buscar</h4>
+        <form action="busca.html" method="get" role="search">
+          <label for="q" class="visually-hidden">Buscar no blog</label>
+          <input id="q" name="q" class="search" placeholder="Pesquisar artigos...">
+        </form>
+      </div>
+
+      <div class="card">
+        <h4>Assine</h4>
+        <p class="muted">Receba novos posts por e-mail.</p>
+        <a class="btn" href="assinatura.html">Assinar newsletter</a>
+      </div>
+    </aside>
   </div>
-  <nav>
-    <ul class="nav-list">
-      <li><a href="index.html" class="active">Início</a></li>
-      <li><a href="educacao-fisica.html">Educação Física</a></li>
-      <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
-      <li><a href="psicologia.html">Psicologia</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-    </ul>
-  </nav>
-</header>
 
-<div class="container">
-  <main>
-    <section class="card">
-      <h2>Últimos posts</h2>
-
-      <article class="post-resumo">
-        <span class="badge">Psicologia</span>
-        <h3><a href="psicologia/post1.html">A Armadilha da Comparação Social</a></h3>
-        <p>Sabe aquela sensação? Você abre o Instagram e vê a foto da viagem perfeita de um amigo...</p>
-        <div class="post-meta"><time datetime="2025-08-23">23 de agosto de 2025</time></div>
-        <a href="psicologia/post1.html" class="ler-artigo">Ler artigo</a>
-      </article>
-
-      <article class="post-resumo">
-        <span class="badge">Ciências Sociais</span>
-        <h3><a href="ciencias-sociais/post1.html">O papel da cultura na construção da identidade</a></h3>
-        <p>A cultura é como o ar que respiramos: invisível, mas essencial. Ela molda quem somos, nossos valores e a forma como vemos o mundo.</p>
-        <div class="post-meta"><time datetime="2025-08-10">10 de agosto de 2025</time></div>
-        <a href="ciencias-sociais/post1.html" class="ler-artigo">Ler artigo</a>
-      </article>
-
-    </section>
-  </main>
-
-  <aside class="sidebar">
-    <div class="card perfil-card">
-      <h3>Sobre o Autor</h3>
-      <img src="images/foto-perfil.jpg" alt="Foto do autor André" class="perfil-img">
-      <p><strong>André</strong> cultiva um jardim de ideias: umas florescem, outras instigam — todas convidam a olhar a vida de ângulos improváveis.</p>
-    </div>
-  </aside>
+  <footer>
+    <p>© 2025 Verso Solto. Todos os direitos reservados.</p>
+  </footer>
 </div>
-
-<footer>
-  <p>© 2025 Verso Solto. Todos os direitos reservados.</p>
-</footer>
 
 </body>
 </html>
