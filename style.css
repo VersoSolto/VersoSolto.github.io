@@ -1,261 +1,49 @@
-/* Importando fontes */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Patrick+Hand&display=swap');
-
-/* -------------------- RESET -------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* -------------------- GERAL -------------------- */
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fdfdfd;
-
-  /* Fundo tipo folha pautada */
-  background-image: 
-    linear-gradient(to bottom, rgba(40, 53, 147, 0.08) 1px, transparent 1px);
-  background-size: 100% 28px;
-  background-attachment: fixed;
-}
-
-h1, h2, h3, h4 {
-  margin-bottom: 0.5em;
-  font-weight: 700;
-}
-
-a {
-  color: #283593;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-a:hover {
-  color: #1a237e;
-  text-decoration: underline;
-}
-
-/* -------------------- CABEÇALHO -------------------- */
-header {
-  background-color: #283593;
-  color: #fff;
-  padding: 1.5em 1em;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  margin-bottom: 1em;
-}
-
-.logo {
-  background: #fff;
-  color: #283593;
-  font-weight: bold;
-  font-size: 1.4em;
-  padding: 0.4em 0.7em;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.titulo-pagina {
-  font-size: 1.8em;
-  margin: 0;
-}
-
-.subtitulo {
-  font-size: 0.95em;
-  color: #c5cae9;
-}
-
-/* -------------------- MENU -------------------- */
-nav {
-  text-align: center;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.2em;
-}
-
-.nav-list a {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 1px;
-  padding-bottom: 0.2em;
-}
-
-.nav-list a.active {
-  border-bottom: 2px solid #fff;
-}
-
-/* -------------------- LAYOUT -------------------- */
-.wrap {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
+/* Container geral */
 .container {
-  flex: 1;
-  max-width: 1200px;
-  margin: 2em auto;
   display: flex;
-  gap: 2em;
-  padding: 0 1em;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-main {
+/* Post com fundo de folha pautada */
+.post-content {
   flex: 3;
-}
-
-.sidebar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-}
-
-/* -------------------- CARDS -------------------- */
-.card {
-  background: #fff;
-  padding: 1.5em;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-}
-
-/* -------------------- POSTS -------------------- */
-.section-title {
-  font-size: 1.4em;
-  color: #283593;
-  margin-bottom: 1em;
-  border-bottom: 2px solid #c5cae9;
-  padding-bottom: 0.3em;
-}
-
-.post-resumo {
-  margin-bottom: 1.5em;
-}
-
-.post-resumo h3 a {
-  color: #283593;
-}
-.post-resumo h3 a:hover {
-  color: #1a237e;
+  background: repeating-linear-gradient(
+    white,
+    white 28px,
+    #e0e0e0 29px
+  );
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  line-height: 1.8;
 }
 
 .post-meta {
-  font-size: 0.85em;
+  font-size: 0.9em;
   color: #555;
-  margin: 0.5em 0;
+  margin-bottom: 1rem;
 }
 
-.ler-artigo {
-  display: inline-block;
-  margin-top: 0.8em;
-  font-weight: 600;
-  color: #3f51b5;
-}
-.ler-artigo:hover {
-  text-decoration: underline;
-}
-
-/* -------------------- SIDEBAR -------------------- */
-.perfil-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 1em;
-  display: block;
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  align-self: flex-start;
 }
 
-.search {
-  width: 100%;
-  padding: 0.6em;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 0.9em;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.6em 1.2em;
-  border-radius: 6px;
-  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
-  color: #fff;
-  font-weight: 600;
-  text-align: center;
-}
-.btn:hover {
-  background: linear-gradient(135deg, #3949ab, #283593);
-}
-
-/* -------------------- RODAPÉ -------------------- */
-footer {
-  background-color: #283593;
-  color: #fff;
-  text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
-  margin-top: 2em;
-}
-
-/* -------------------- ACESSIBILIDADE -------------------- */
-.visually-hidden {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* -------------------- RESPONSIVIDADE -------------------- */
-@media (max-width: 900px) {
+/* Ajuste para mobile */
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
-  .sidebar {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  .sidebar .card {
-    flex: 1;
-    min-width: 250px;
-  }
-}
 
-@media (max-width: 600px) {
-  .titulo-pagina {
-    font-size: 1.4em;
-  }
-  .nav-list {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  .sidebar {
-    flex-direction: column;
+  .post-content {
+    margin-bottom: 2rem;
   }
 }
