@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ciências Sociais | Verso Solto</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ciências Sociais | Verso Solto</title>
+  <meta name="description" content="Textos sobre cultura, laços e vida coletiva." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-<div class="wrap">
-  <header class="sticky-header">
+  <header>
     <div class="brand">
-      <div class="logo">VS</div>
+      <div class="logo" aria-hidden="true">VS</div>
       <div>
-        <h1 class="titulo-pagina">Ciências Sociais</h1>
-        <p class="subtitulo">Estudos sobre sociedade, cultura e relações humanas.</p>
+        <div class="site-title">Verso Solto</div>
+        <div class="tagline">Reflexões sobre corpo, mente e sociedade.</div>
       </div>
     </div>
-    <nav>
-      <ul class="nav-list">
+    <nav aria-label="Navegação principal">
+      <ul class="nav">
         <li><a href="index.html">Início</a></li>
         <li><a href="educacao-fisica.html">Educação Física</a></li>
         <li><a href="ciencias-sociais.html" class="active">Ciências Sociais</a></li>
@@ -29,28 +28,47 @@
     </nav>
   </header>
 
-  <div class="container no-sidebar">
+  <div class="container">
     <main>
-      <section class="card">
-        <h2 class="section-title">Artigos</h2>
-        <ul>
-          <li>
-            <a href="ciencias-sociais/post1.html">O papel da cultura na construção da identidade</a>
-            <small>(10/08/2025)</small>
-          </li>
-          <li>
-            <a href="ciencias-sociais/post2.html">Como a sociedade influencia nossas escolhas</a>
-            <small>(02/08/2025)</small>
-          </li>
-        </ul>
+      <section class="paper" aria-label="Introdução">
+        <h1>Ciências Sociais</h1>
+        <p>A cultura como ar que respiramos: invisível, mas essencial. Ensaios sobre laços, rituais e cidades.</p>
+      </section>
+
+      <section class="card" style="margin-top:14px" aria-label="Artigos">
+        <h2>Artigos</h2>
+        <article class="post">
+          <h3 class="post-title"><a href="ciencias-sociais/post1.html">O papel da cultura na construção da identidade</a></h3>
+          <div class="post-meta">Publicado em 10/08/2025</div>
+        </article>
       </section>
     </main>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Sobre o Autor</h3>
+        <img src="images/Foto Post.png" alt="Foto de André" class="perfil-img" />
+        <p>André olha a cidade como poema: ruas, afetos e encontros que moldam quem somos.</p>
+      </div>
+
+      <div class="card">
+        <h3>Buscar</h3>
+        <form action="busca.html" method="get" role="search">
+          <label for="q" class="visually-hidden">Buscar</label>
+          <input id="q" name="q" class="search" placeholder="Palavras-chave…" />
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Assine</h3>
+        <p class="muted">Receba novos textos por e-mail.</p>
+        <a class="btn" href="assinatura.html">Assinar newsletter</a>
+      </div>
+    </aside>
   </div>
 
   <footer>
-    <p>© 2025 Verso Solto. Todos os direitos reservados.</p>
+    <p>© 2025 Verso Solto — Todos os direitos reservados.</p>
   </footer>
-</div>
-
 </body>
 </html>
