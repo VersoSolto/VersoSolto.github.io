@@ -72,7 +72,7 @@ nav a:hover {
 }
 
 main {
-    flex: 3;
+    flex: 2; /* Ajusta para que a área de posts ocupe mais espaço */
 }
 
 .no-sidebar main {
@@ -80,7 +80,7 @@ main {
 }
 
 .sidebar {
-    flex: 1;
+    flex: 1; /* Ajusta para que a barra lateral ocupe menos espaço */
     background-color: #fff;
     padding: 2em;
     border-radius: 8px;
