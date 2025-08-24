@@ -99,9 +99,12 @@ main {
     align-self: flex-start;
 }
 
-.sidebar h3 {
-    color: #283593;
-    font-weight: 700;
+.no-sidebar main {
+    flex: 1;
+}
+
+.no-sidebar .sidebar {
+    display: none;
 }
 
 /* ======== PERFIL NA SIDEBAR ======== */
@@ -235,7 +238,7 @@ a:hover {
     .titulo-pagina {
         font-size: 2em;
     }
-
+    
     header {
         padding: 2em 0;
     }
@@ -246,12 +249,12 @@ a:hover {
         gap: 0.5em;
         margin-top: 1em;
     }
-
+    
     nav li {
         display: block;
         margin: 0;
     }
-
+    
     .categoria {
         padding: 1.5em;
     }
@@ -259,21 +262,4 @@ a:hover {
     .categoria h2 {
         font-size: 1.5em;
     }
-}
-
-/* ======== NOVAS REGRAS ======== */
-/* Esconde a sidebar se não tiver conteúdo visível */
-.sidebar:empty {
-    display: none;
-}
-
-/* Faz o main ocupar toda a largura quando não houver sidebar */
-.container:not(:has(.sidebar)),
-.container:has(.sidebar:empty) {
-    justify-content: flex-start;
-}
-
-.container:not(:has(.sidebar)) main,
-.container:has(.sidebar:empty) main {
-    flex: 1;
 }
