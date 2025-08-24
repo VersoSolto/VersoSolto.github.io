@@ -1,104 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Início | Verso Solto</title>
+  <title>Verso Solto</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="wrap">
-
-  <!-- CABEÇALHO -->
-  <header class="sticky-header">
-    <div class="brand">
-      <div class="logo">VS</div>
-      <div>
-        <h1 class="titulo-pagina">Verso Solto</h1>
-        <p class="subtitulo">Um espaço de reflexões, ideias e aprendizados</p>
-      </div>
-    </div>
+  <header>
+    <h1>Verso Solto</h1>
+    <p>Reflexões sobre corpo, mente e sociedade.</p>
     <nav>
-      <ul class="nav-list">
-        <li><a href="index.html" class="active">Início</a></li>
+      <ul>
         <li><a href="educacao-fisica.html">Educação Física</a></li>
         <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
         <li><a href="psicologia.html">Psicologia</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL + SIDEBAR -->
   <div class="container">
     <main>
-      <section class="card">
-        <h2 class="section-title">Últimos posts</h2>
-
-        <article class="post-resumo">
-          <h3><a href="#">A poesia que habita o cotidiano</a></h3>
-          <p>Entre cafés, ruas e encontros, versos nascem onde menos esperamos — um convite para enxergar poesia no ordinário.</p>
-          <div class="post-meta">
-            <span>Poesia</span><span> · </span>
-            <time datetime="2025-08-20">20 ago 2025</time>
-          </div>
-          <a href="#" class="ler-artigo">Ler artigo</a>
-        </article>
-
-        <article class="post-resumo">
-          <h3><a href="#">Corpo em movimento, mente em equilíbrio</a></h3>
-          <p>Educação física além do treino: um caminho de autoconhecimento, saúde e consciência corporal.</p>
-          <div class="post-meta">
-            <span>Educação Física</span><span> · </span>
-            <time datetime="2025-08-15">15 ago 2025</time>
-          </div>
-          <a href="#" class="ler-artigo">Ler artigo</a>
-        </article>
-
-        <article class="post-resumo">
-          <h3><a href="#">Entre sociedade e indivíduo</a></h3>
-          <p>As ciências sociais como lente para entender nossos papéis e responsabilidades no mundo coletivo.</p>
-          <div class="post-meta">
-            <span>Ciências Sociais</span><span> · </span>
-            <time datetime="2025-08-10">10 ago 2025</time>
-          </div>
-          <a href="#" class="ler-artigo">Ler artigo</a>
-        </article>
-      </section>
+      <h2>Bem-vindo ao Verso Solto</h2>
+      <p>Este espaço reúne reflexões, artigos e aprendizados em três áreas principais: 
+         <strong>Educação Física</strong>, <strong>Ciências Sociais</strong> e <strong>Psicologia</strong>.
+      </p>
     </main>
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
-      <div class="card perfil-card">
+      <div class="perfil">
         <h3>Sobre o Autor</h3>
-        <img src="images/foto-perfil.jpg" alt="Foto do autor André" class="perfil-img">
+        <img src="images/Foto Post.png" alt="Foto de André Carvalho" class="perfil-img">
         <p>André habita o Verso Solto como quem cultiva um jardim de ideias: umas florescem, outras instigam — todas convidam a olhar a vida de ângulos improváveis.</p>
-      </div>
-
-      <div class="card">
-        <h4>Buscar</h4>
-        <form action="/busca.html" method="get" role="search">
-          <label for="q" class="visually-hidden">Buscar no blog</label>
-          <input id="q" name="q" class="search" placeholder="Pesquisar artigos...">
-        </form>
-      </div>
-
-      <div class="card">
-        <h4>Assine</h4>
-        <p class="muted">Receba novos posts por e-mail.</p>
-        <a class="btn" href="/assinatura.html">Assinar newsletter</a>
       </div>
     </aside>
   </div>
 
-  <!-- RODAPÉ -->
   <footer>
-    <p>© 2025 Verso Solto. Todos os direitos reservados.</p>
+    <p>© 2025 Verso Solto — Todos os direitos reservados.</p>
   </footer>
-
-</div>
-
 </body>
 </html>
