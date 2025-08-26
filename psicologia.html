@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Psicologia | Verso Solto</title>
     <meta name="description" content="Textos sobre comportamento, emoções e sentido." />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -19,11 +19,11 @@
         </div>
         <nav aria-label="Navegação principal">
             <ul class="nav">
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="../educacao-fisica.html">Educação Física</a></li>
-                <li><a href="../ciencias-sociais.html">Ciências Sociais</a></li>
-                <li><a href="../psicologia.html" class="active">Psicologia</a></li>
-                <li><a href="../sobre.html">Sobre</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="educacao-fisica.html">Educação Física</a></li>
+                <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
+                <li><a href="psicologia.html" class="active">Psicologia</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
@@ -42,6 +42,28 @@
                 </article>
             </section>
         </main>
+
+        <aside class="sidebar">
+            <div class="card">
+                <h3>Sobre o Autor</h3>
+                <img src="images/Foto Post.png" alt="Foto de André" class="perfil-img" />
+                <p>André escreve como quem abre janelas: areja a casa e acende uma luz silenciosa.</p>
+            </div>
+
+            <div class="card">
+                <h3>Buscar</h3>
+                <form action="busca.html" method="get" role="search">
+                    <label for="q" class="visually-hidden">Buscar</label>
+                    <input id="q" name="q" class="search" placeholder="Palavras-chave…" />
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Assine</h3>
+                <p class="muted">Receba novos textos por e-mail.</p>
+                <a class="btn" href="assinatura.html">Assinar newsletter</a>
+            </div>
+        </aside>
     </div>
 
     <footer>
