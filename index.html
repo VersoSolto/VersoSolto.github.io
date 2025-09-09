@@ -4,93 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Verso Solto | Reflexões sobre corpo, mente e sociedade</title>
-  <meta name="description" content="Verso Solto — textos sobre Educação Física, Ciências Sociais e Psicologia. Um espaço leve, poético e acolhedor." />
+  <meta name="description" content="Um jardim de ideias sobre Educação Física, Ciências Sociais e Psicologia." />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="assets/favicon.ico" />
-  <meta property="og:title" content="Verso Solto" />
-  <meta property="og:description" content="Reflexões sobre corpo, mente e sociedade." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og-image.png" />
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Blog",
-    "name":"Verso Solto",
-    "url":"https://versosolto.github.io/",
-    "author":{"@type":"Person","name":"André"}
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <div class="logo" aria-hidden="true">VS</div>
-      <div>
-        <div class="site-title">Verso Solto</div>
-        <div class="tagline">Reflexões sobre corpo, mente e sociedade.</div>
+
+  <header class="site-header">
+    <div class="header-content">
+      <div class="brand">
+        <a href="index.html" class="site-title">Verso Solto</a>
+        <p class="tagline">Reflexões sobre corpo, mente e sociedade.</p>
       </div>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="educacao-fisica.html">Educação Física</a></li>
+          <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
+          <li><a href="psicologia.html">Psicologia</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav aria-label="Navegação principal">
-      <ul class="nav">
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="educacao-fisica.html">Educação Física</a></li>
-        <li><a href="ciencias-sociais.html">Ciências Sociais</a></li>
-        <li><a href="psicologia.html">Psicologia</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <div class="container">
-    <main>
-      <section class="paper" aria-label="Apresentação">
-        <h1>Bem-vindo</h1>
-        <p>O <strong>Verso Solto</strong> é um espaço digital que convida à reflexão — leve como um café compartilhado. Aqui moram textos que misturam técnica e sensibilidade em três territórios: <em>Educação Física</em>, <em>Ciências Sociais</em> e <em>Psicologia</em>.</p>
-      </section>
+  <main class="container">
+    <section aria-label="Apresentação">
+      <h1>Um jardim de ideias.</h1>
+      <p style="font-size: 1.2rem; color: var(--primary-text);">O <strong>Verso Solto</strong> é um convite à reflexão. Um espaço onde corpo, mente e sociedade se encontram para um café demorado. Aqui, cultivo textos que misturam técnica e sensibilidade em três canteiros: Educação Física, Ciências Sociais e Psicologia.</p>
+    </section>
 
-      <section class="card" style="margin-top:14px" aria-label="Últimos posts">
-        <h2>Últimos posts</h2>
+    <section aria-label="Últimos posts" style="margin-top: 40px;">
+      <h2>Textos Recentes</h2>
 
-        <article class="post">
-          <h3 class="post-title"><a href="psicologia/post1.html">A Armadilha da Comparação Social</a></h3>
-          <p class="post-excerpt">Como a vitrine das redes pode distorcer o nosso espelho interno — e o que fazer com isso.</p>
-          <div class="post-meta">Psicologia · 23/08/2025</div>
-        </article>
+      <a href="psicologia/post1.html" class="card">
+        <h3>A Armadilha da Comparação Social</h3>
+        <p class="post-excerpt">Como a vitrine das redes pode distorcer o nosso espelho interno — e o que fazer com isso.</p>
+        <div class="post-meta">Psicologia · 23/08/2025</div>
+      </a>
 
-        <article class="post">
-          <h3 class="post-title"><a href="ciencias-sociais/post1.html">O papel da cultura na construção da identidade</a></h3>
-          <p class="post-excerpt">A cultura como ar invisível que molda quem somos — gestos, crenças, rotas do cotidiano.</p>
-          <div class="post-meta">Ciências Sociais · 10/08/2025</div>
-        </article>
-      </section>
-    </main>
+      <a href="ciencias-sociais/post1.html" class="card">
+        <h3>O papel da cultura na construção da identidade</h3>
+        <p class="post-excerpt">A cultura como ar invisível que molda quem somos: gestos, crenças e as rotas do cotidiano.</p>
+        <div class="post-meta">Ciências Sociais · 10/08/2025</div>
+      </a>
+      
+      <a href="educacao-fisica/post1.html" class="card">
+        <h3>A importância do aquecimento antes do treino</h3>
+        <p class="post-excerpt">Mais do que preparar o corpo, aquecer é um ritual que sintoniza a mente para o movimento.</p>
+        <div class="post-meta">Educação Física · 13/08/2025</div>
+      </a>
+    </section>
+  </main>
 
-    <aside class="sidebar">
-      <div class="card">
-        <h3>Sobre o Autor</h3>
-        <img src="images/Foto Post.png" alt="Foto de André" class="perfil-img" />
-        <p><strong>André</strong>, jardineiro de ideias: umas florescem, outras instigam — todas convidam a ver a vida por ângulos improváveis.</p>
-      </div>
-
-      <div class="card">
-        <h3>Buscar</h3>
-        <form action="busca.html" method="get" role="search">
-          <label for="q" class="visually-hidden">Buscar</label>
-          <input id="q" name="q" class="search" placeholder="Palavras-chave…" />
-        </form>
-      </div>
-
-      <div class="card">
-        <h3>Assine</h3>
-        <p class="muted">Receba novos textos por e-mail.</p>
-        <a class="btn" href="assinatura.html">Assinar newsletter</a>
-      </div>
-    </aside>
-  </div>
-
-  <footer>
+  <footer class="site-footer">
     <p>© 2025 Verso Solto — Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
